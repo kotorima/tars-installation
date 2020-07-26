@@ -1,0 +1,100 @@
+{
+  "name": "tars",
+  "version": "1.14.1",
+  "engines": {
+    "node": "^8.x.x"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "description": "Powerfull markup builder",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "browser-sync": "^2.26.7",
+    "chokidar": "^3.3.1",
+    "comment-json": "^2.4.1",
+    "del": "^5.1.0",
+    "download": "4.4.3",
+    "eslint": "^6.8.0",
+    "eslint-loader": "^3.0.3",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-cached": "^1.1.1",
+    "gulp-changed": "^4.0.2",
+    "gulp-compile-handlebars": "0.6.1",
+    "gulp-concat": "2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-data": "^1.3.1",
+    "gulp-eslint": "^6.0.0",
+    "gulp-html-prettify": "https://github.com/artem-malko/gulp-html-prettify/archive/master.tar.gz",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "6.2.0",
+    "gulp-importify": "^0.0.7",
+    "gulp-jade": "1.1.0",
+    "gulp-jade-inheritance": "https://github.com/tars/gulp-jade-inheritance/archive/master.tar.gz",
+    "gulp-less": "3.5.0",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-pug-inheritance": "https://github.com/artem-malko/gulp-pug-inheritance/archive/master.tar.gz",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace-task": "0.11.0",
+    "gulp-sass": "https://github.com/stof/gulp-sass/archive/7ab018e3678729392978311eef2cb02754650960.tar.gz",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-stylus": "^2.7.0",
+    "gulp-svg-spritesheet": "https://github.com/artem-malko/gulp-svg-spritesheet/archive/master.tar.gz",
+    "gulp-svg-symbols": "https://github.com/artem-malko/gulp-svg-symbols/archive/master.tar.gz",
+    "gulp-svg2png": "1.0.2",
+    "gulp-terser": "^1.2.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-util": "3.0.8",
+    "gulp-zip": "^5.0.0",
+    "gulp.spritesmith": "^6.10.1",
+    "gulp4-run-sequence": "^1.0.0",
+    "mkdirp": "^0.5.1",
+    "ncp": "^2.0.0",
+    "run-sequence": "^2.2.1",
+    "source-map-loader": "^0.2.4",
+    "stream-combiner": "^0.2.2",
+    "terser-webpack-plugin": "1.4.1",
+    "through2": "^3.0.1",
+    "uglifyjs-webpack-plugin": "2.2.0",
+    "webpack": "^4.39.1",
+    "webpack-dev-middleware": "^3.7.0",
+    "webpack-hot-middleware": "^2.25.0"
+  },
+  "optionalDependencies": {
+    "posix": "^4.1.2",
+    "fsevents": "^2.0.7"
+  },
+  "scripts": {
+    "install": "node ./tars/helpers/install-additional-deps.js",
+    "lint": "eslint webpack.config.js tars/*.js tars/tasks/**/*.js tars/watchers/**/*.js tars/helpers/**/*.js gulpfile.js --rule 'valid-jsdoc: [0, {}]'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tars/tars.git"
+  },
+  "author": "Artem Malko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tars/tars/issues"
+  },
+  "homepage": "https://github.com/tars/tars",
+  "keywords": [
+    "gulp",
+    "makeup",
+    "markup"
+  ]
+}
