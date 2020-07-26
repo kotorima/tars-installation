@@ -1,6 +1,8 @@
 include ../menu/menu.pug
+include ../search/search.pug
 
 mixin header(data)
     .header
-        .page__wr
+        .header__content.page__wr
             +menu(header.menu)
+            +search()

@@ -1,0 +1,21 @@
+mixin search()
+    .search
+        form.search__form(autocomplete="off")
+            .search__form-input-wr
+                input.search__form-input(type='text', name='search', id="search", placeholder="Поиск")
+                label.search__form-label(for="search")
+                    .search__form-icon
+                    .search__form-icon.search__form-icon--close
+            //- .search__form-request
+            //-     .search__form-request-wr
+            //-         .search__form-request-preloader
+            //-             .search__search-form-request-preloader-block
+            //-         .search__form-request-no-data
+            //-             p.search__form-request-no-text По вашему запросу ничего не найдено
+            //-         .search__form-request-data
+            //-             .search__form-request-data-list
+            //-                 a(href='#').search__form-request-data-item
+            //-                     h4.search__form-request-item-headline
+            //-                     .search__form-request-item-link
+            //-                     p.search__form-request-item-description
+
