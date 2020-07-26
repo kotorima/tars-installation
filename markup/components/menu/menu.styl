@@ -1,0 +1,47 @@
+.menu {
+    display: flex;
+
+    &__item {
+        position: relative;
+        padding: 12px;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: rgb(255, 0, 106);
+            $transition();
+        }
+
+        &:hover {
+            .menu__item-text {
+                color: rgb(38, 38, 38);
+                text-shadow: 0 0 .5px rgb(38, 38, 38);
+            }
+        }
+
+        &--active {
+            &:before {
+                width: 100%;
+            }
+
+            .menu__item-text {
+                color: rgb(38, 38, 38);
+                text-shadow: 0 0 .5px rgb(38, 38, 38);
+            }
+        }
+    }
+
+    &__item-text {
+        font-family: $openSansRegular;
+        font-size: remify(16px);
+        color: rgb(150, 150, 150);
+        $transition();
+    }
+}

@@ -1,0 +1,23 @@
+// Common styles of the project
+
+html, body
+    height 100%
+
+
+.page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  &__content {
+    flex: 1 0 auto;
+  }
+
+  &__wr {
+    margin: 0 auto;
+    height: 100%;
+    @extend .container;
+  }
+}

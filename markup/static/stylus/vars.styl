@@ -1,0 +1,85 @@
+// File for less-vars.
+// For example: main colors, paddings and so on.
+
+$mobilePoints = 320px 370px 410px
+$mobileLandPoints = 480px 560px 620px
+//                   0      1     2
+$tabletPoints = 767px 960px
+$desktopPoints = 1280px 1680px 1920px
+$mac = 2000px
+$containerWidth = 1200px
+//                    0      1      2
+
+$mobile370 = 'screen and (min-width: ' +$mobilePoints[1] + ')' // 370
+$mobileLand480 = 'screen and (min-width: ' +$mobileLandPoints[0] + ')' // 480
+$mobile767 = 'screen and (min-width: ' +$tabletPoints[0] + ')' // 767
+$tablet767W600H = 'screen and (min-width: ' +$tabletPoints[0] + ') and (min-height: 600px)' // 767W 600H
+$tabletLand960 = 'screen and (min-width: ' +$tabletPoints[1] + ')' // 960
+$desktop1280 = 'screen and (min-width: ' +$desktopPoints[0] + ')' // 1280
+$desktop1366 = 'screen and (min-width: 1366px)' // 1366
+$desktopSmallHeight1200W700H = 'screen and (min-width: ' +$desktopPoints[0] + ') and (max-height: 700px)' // 1200 и высота меньше 700
+$desktopHD1600 = 'screen and (min-width: ' +$desktopPoints[1] + ')' // 1600
+$desktopBig1900 = 'screen and (min-width: ' +$desktopPoints[2] + ')' // 1900
+$mac2000 = 'screen and (min-width: ' +$mac[0] + ')' // 2000
+
+//@media $mobile370 {
+
+//}
+
+//@media $mobileLand480 {
+
+//}
+
+//@media $tablet767 {
+
+//}
+
+//@media $tabletLand960 {
+
+//}
+
+//@media $desktop1200 {
+
+//}
+
+//@media $desktopSmallHeight1200W700H {
+
+//}
+
+//@media $desktopHD1600 {
+
+//}
+
+//@media $desktopBig1900 {
+
+//}
+
+//@media $mac2000 {
+
+//}
+
+media(bp, fs, fw, cw) {
+  @media (min-width bp) {
+    /*html {
+      font-size ((bp * fs) / fw) // fw - ширина контента в фотошопе
+    }*/
+
+    .container {
+      width cw
+    }
+  }
+}
+
+for key, i in $mobilePoints {
+  media($mobilePoints[i], 16, $mobilePoints[1], 100%)
+}
+
+for key, i in $mobileLandPoints {
+  media($mobileLandPoints[i], 16, $mobileLandPoints[2], 100%)
+}
+
+media($tabletPoints[1], 17.5, $desktopPoints[2], 880px)
+
+for key, i in $desktopPoints {
+  media($desktopPoints[i], 16, $desktopPoints[2], $containerWidth[i])
+}

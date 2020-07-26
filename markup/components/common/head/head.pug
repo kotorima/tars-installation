@@ -1,0 +1,17 @@
+mixin head(data)
+  meta(charset="utf-8")
+  meta(http-equiv="x-ua-compatible", content="ie=edge")
+  title #{data.title}
+
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+  | <!--[if IE 8 ]><link href="%=static=%css/main_ie8%=hash=%%=min=%.css" rel="stylesheet" type="text/css"><![endif]-->
+  | <!--[if IE 9 ]><link href="%=static=%css/main_ie9%=hash=%%=min=%.css" rel="stylesheet" type="text/css"><![endif]-->
+  | <!--[if (gt IE 9)|!(IE)]><!--><link href="%=static=%css/main%=hash=%%=min=%.css" rel="stylesheet" type="text/css"><!--<![endif]-->
+
+  link(rel="icon" type="image/x-icon" href="favicon.ico")
+  script.
+    (function(H) {
+      H.className = H.className.replace(/\bno-js\b/, 'js')
+    })(document.documentElement)
+  | <!--[if lt IE 9 ]><script src="%=static=%js/separate-js/html5shiv-3.7.2.min.js" type="text/javascript"></script><meta content="no" http-equiv="imagetoolbar"><![endif]-->

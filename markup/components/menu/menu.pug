@@ -1,0 +1,5 @@
+mixin menu(data)
+    .menu
+        each item in header.menu
+            .menu__item(data-category-id=item.categoryId)
+                .menu__item-text!=item.title

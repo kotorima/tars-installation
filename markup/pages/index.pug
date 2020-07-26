@@ -1,0 +1,22 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/common/head/head.pug
+    include ../components/common/scripts/scripts.pug
+    include ../components/header/header.pug
+    include ../components/product-list/product-list.pug 
+
+    head
+        +head(common_head.defaults)
+    body
+        |%=symbols=%
+
+        .page
+            .page__content
+
+                +header(header)
+                .page__wr
+                    +product-list(productList)
+
+        +scripts()                
+
